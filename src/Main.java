@@ -8,6 +8,9 @@ public class Main {
         System.out.println("\n----INFORMACION DOCENTE----\n");
         Docente docente1=new Docente("1735263782","Santiago Linares","Solanda", "santiago10@gmail.com", "0893756273","ESFOT", "10");
         docente1.mostrarInformacion();
+        System.out.println("\n-------DOCENTE EN LINEA------\n");
+        Docente_linea doc_lin1=new Docente_linea("1746382765", "Jonathan Hardford","Guayaquil","jonathan@gmail.com","Geometria","20","Finalizado");
+        doc_lin1.mostrarInformacionSinTelefono();
 
         System.out.println("\n----INFORMACION ESTUDIANTE PRESENCIAL----\n");
         Estudiante_Presencial es_pre1=new Estudiante_Presencial("1725364920", "Liam Vega","El Valle", "liam@gmail.com","0998756754","Medicina","Cuarto Semestre",5,"Mañana");
