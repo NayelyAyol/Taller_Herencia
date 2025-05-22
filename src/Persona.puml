@@ -1,0 +1,49 @@
+@startuml
+class Persona{
++String cedula
++String nombre
++String direccion
++String correo
++String telefono
++void MostrarInformacionPersonal()
+}
+
+class Estudiante{
++String carrera
++String nivel
++void MostrarInformacionPersonal(){overrride}
++int calculoEdad(int anio_nacimiento, int anio_actual)
+}
+
+class Docente{
++String FacultadPertenece
++String HoraAsignadaClases
++void MostrarInformacionPersonal(){overrride}
+}
+
+class Docente_linea{
++String contrato
++void MostrarInformacionPersonal(){overrride}
+}
+class Estudiante_Virtual{
++String plataforma
++String tutore
++void MostrarInformacionPersonal(){overrride}
++int calculoEdad(int anio_nacimiento, int anio_actual){overrride}
+}
+
+class Estudiante_Presencial{
++String hora_presencial
++String horario
++void MostrarInformacionPersonal(){overrride}
++int calculoEdad(int anio_nacimiento, int anio_actual){overrride}
+}
+
+Persona <|-- Estudiante
+Persona <|-- Docente
+
+Estudiante <|-- Estudiante_Virtual
+Estudiante <|-- Estudiante_Presencial
+Docente <|-- Docente_linea
+
+@enduml
